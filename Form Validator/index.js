@@ -9,9 +9,11 @@ eyes.forEach((eye) => {
   eye.addEventListener("click", (e) => {
     const parentNode = e.target.parentNode;
     const targetInput = parentNode.querySelector("input");
+    console.log(targetInput);
 
     if (
-      (targetInput.id === "password" || targetInput.id === "password2") &&
+      (targetInput.id === "password" ||
+        targetInput.id === "confirm_password") &&
       targetInput.getAttribute("type") === "password"
     ) {
       targetInput.setAttribute("type", "text");
@@ -43,10 +45,8 @@ function isValidEmail(emailValue) {
 }
 
 function isValidPassword(inputValue) {
-  const re = new RegExp(
-    "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})"
-  );
-  return re.test(String(inputValue).toLowerCase());
+  const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+  return re.test(String(inputValue));
 }
 
 function isAnyEmpty(inputArray) {
@@ -77,9 +77,6 @@ function isPasswordValid() {
   !isValidPassword(password.value)
     ? showError(password, "Password is invalid!")
     : showSuccess(password);
-  !isValidPassword(password2.value)
-    ? showError(password2, "Confirm password is invalid!")
-    : showSuccess(password2);
 }
 
 form.addEventListener("submit", (e) => {
