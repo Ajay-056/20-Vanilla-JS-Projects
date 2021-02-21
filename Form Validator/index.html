@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Validator</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'
+        integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=='
+        crossorigin='anonymous' />
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form" class="form" autocomplete="off" novalidate>
+            <h2>Register With Us</h2>
+            <div class="form-control">
+                <input type="text" id="username" required>
+                <label for="username">Username</label>
+                <small></small>
+            </div>
+            <div class="form-control">
+                <input type="text" id="email" required>
+                <label for="email">Email</label>
+                <small></small>
+            </div>
+            <div class="form-control">
+                <input type="password" id="password" required>
+                <label for="password">Password</label>
+                <i class="fas fa-eye"></i>
+                <small></small>
+            </div>
+            <div class="form-control">
+                <input type="password" id="confirm_password" required>
+                <label for="password2">Confirm password</label>
+                <i class="fas fa-eye"></i>
+                <small></small>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    
+</body>
+
+</html>
