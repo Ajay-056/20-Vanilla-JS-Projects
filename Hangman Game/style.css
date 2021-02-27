@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #34495e;
+  color: #fff;
+  font-family: "Muli", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.logo {
+  margin-top: 5rem;
+}
+
+h1 {
+  margin: 2rem 0 0;
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.game-container {
+  padding: 3rem 3rem 3rem 1rem;
+  position: relative;
+  margin: auto;
+  height: 35rem;
+  width: 45rem;
+}
+
+.game-container .figure-container {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.game-container .figure-container .figure-part {
+  display: none;
+}
+
+.game-container .figure-container .figure-part.hang {
+  -webkit-transform: skew(0);
+          transform: skew(0);
+  -webkit-animation: hang 3s linear infinite;
+          animation: hang 3s linear infinite;
+}
+
+.game-container .wrong-letters-container {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+}
+
+.game-container .wrong-letters-container p {
+  margin: 0 0 5px;
+}
+
+.game-container .wrong-letters-container span {
+  font-size: 2.4rem;
+}
+
+.game-container .word {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.game-container .word .letter {
+  border-bottom: 3px solid #2980b9;
+  display: inline-block;
+  font-size: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 3px;
+  height: 5rem;
+  width: 2rem;
+}
+
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.popup-container .popup {
+  background-color: #2980b9;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1.5rem 1rem 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1.5rem 1rem 3px rgba(0, 0, 0, 0.1);
+  padding: 4rem;
+  text-align: center;
+}
+
+.popup-container .popup h2 {
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+}
+
+.popup-container .popup .play-button {
+  cursor: pointer;
+  background-color: #fff;
+  color: #2980b9;
+  border: 0;
+  margin-top: 2rem;
+  padding: 1.2rem 2rem;
+  border-radius: 5px;
+  font-size: 1.7rem;
+}
+
+.popup-container .popup .play-button:focus {
+  outline: none;
+}
+
+.popup-container .popup .play-button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.notification-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1rem 1rem 0 0;
+  padding: 1.5rem 2rem;
+  position: absolute;
+  bottom: -5rem;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.notification-container.show {
+  -webkit-transform: translateY(-5rem);
+          transform: translateY(-5rem);
+}
+
+@-webkit-keyframes hang {
+  from {
+    -webkit-transform: skew(7deg);
+            transform: skew(7deg);
+  }
+  to {
+    -webkit-transform: skew(-7deg);
+            transform: skew(-7deg);
+  }
+}
+
+@keyframes hang {
+  from {
+    -webkit-transform: skew(7deg);
+            transform: skew(7deg);
+  }
+  to {
+    -webkit-transform: skew(-7deg);
+            transform: skew(-7deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

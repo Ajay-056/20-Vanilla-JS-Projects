@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+</head>
+
+<body>
+    <img class="logo" alt="svgImg"
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIKdmlld0JveD0iMCAwIDE3MiAxNzIiCnN0eWxlPSIgZmlsbDojMDAwMDAwOyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iIiBzdHJva2UtZGFzaG9mZnNldD0iMCIgZm9udC1mYW1pbHk9Im5vbmUiIGZvbnQtd2VpZ2h0PSJub25lIiBmb250LXNpemU9Im5vbmUiIHRleHQtYW5jaG9yPSJub25lIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6IG5vcm1hbCI+PHBhdGggZD0iTTAsMTcydi0xNzJoMTcydjE3MnoiIGZpbGw9Im5vbmUiPjwvcGF0aD48ZyBmaWxsPSIjZTc0YzNjIj48cGF0aCBkPSJNNzkuMzg0NjIsMHY5LjMwMjg4bDEzLjIzMDc3LDYuNjE1Mzh2LTE1LjkxODI3ek03MS45NDIzMSwxMS43ODM2NWMtMi45NzE3NiwwLjMxMDEgLTUuMzc1LDIuNTU4MjkgLTUuODY1OTksNS41MDQyMWMtMC40OTA5OCwyLjk3MTc2IDEuMDU5NSw1Ljg2NTk5IDMuNzk4NjgsNy4xMDYzN2wyNi40NjE1NCwxMy4yMzA3N2MyLjE0NDgzLDEuMzk1NDQgNC45MDk4NiwxLjQ0NzEyIDcuMDgwNTMsMC4xMjkyMWMyLjE5NjUxLC0xLjM0Mzc1IDMuNDExMDYsLTMuODI0NTIgMy4xMjY4LC02LjM4MjgxYy0wLjI4NDI2LC0yLjUzMjQ2IC0xLjk4OTc4LC00LjcwMzEzIC00LjQxODg3LC01LjUzMDA1bC0yNi40NjE1NCwtMTMuMjMwNzdjLTAuOTU2MTMsLTAuNTE2ODMgLTIuMDE1NjIsLTAuODAxMDggLTMuMTAwOTYsLTAuODI2OTJjLTAuMjA2NzMsMCAtMC40MTM0NiwwIC0wLjYyMDE5LDB6TTcxLjMyMjEyLDMxLjAwOTYyYy0yLjg5NDIzLDAuNDkwOTkgLTUuMTE2NTgsMi44NDI1NSAtNS40NTI1Myw1Ljc2MjYyYy0wLjMxMDEsMi45MjAwNyAxLjI5MjA3LDUuNzEwOTQgNC4wMDU0MSw2Ljg0Nzk2bDI2LjQ2MTU0LDEzLjIzMDc3YzIuMTQ0ODMsMS4zOTU0NCA0LjkwOTg2LDEuNDQ3MTIgNy4wODA1MywwLjEyOTIxYzIuMTk2NTEsLTEuMzQzNzUgMy40MTEwNiwtMy44MjQ1MiAzLjEyNjgsLTYuMzgyODFjLTAuMjg0MjYsLTIuNTMyNDYgLTEuOTg5NzgsLTQuNzAzMTMgLTQuNDE4ODcsLTUuNTMwMDVsLTI2LjQ2MTU0LC0xMy4yMzA3N2MtMS4xMzcwMiwtMC42NDYwMyAtMi40MjkwOCwtMC45MzAyOSAtMy43MjExNSwtMC44MjY5MmMtMC4yMDY3MywwIC0wLjQxMzQ2LDAgLTAuNjIwMTksMHpNNzEuMzIyMTIsNDkuNjE1MzhjLTIuODk0MjMsMC40OTA5OSAtNS4xMTY1OCwyLjg0MjU1IC01LjQ1MjUzLDUuNzYyNjJjLTAuMzEwMSwyLjkyMDA3IDEuMjkyMDcsNS43MTA5NCA0LjAwNTQxLDYuODQ3OTZsOC40NzU5Niw0LjEzNDYyYy0wLjgwMTA4LDEuNzU3MjEgLTEuOTg5NzgsMy45NTM3MiAtMy45Mjc4OCw2LjYxNTM4Yy0zLjQzNjksNC43MDMxMyAtOC4zOTg0NCwxMC40Mzk5IC0xMy40Mzc1LDE2LjUzODQ2Yy0xMC4wNzgxMiwxMi4xOTcxMiAtMjEuMjkzMjcsMjYuMjU0ODEgLTIxLjI5MzI3LDQyLjc5MzI3YzAsMTUuMjcyMjQgNy44Mjk5MywyNi4xNTE0NCAxNy4zNjUzOCwzMi4wNDMyN2M5LjUzNTQ2LDUuODkxODMgMjAuMzYyOTgsNy42NDkwNCAyOC45NDIzMSw3LjY0OTA0YzguNDc1OTYsMCAxOS4zNTUxNywtMS4zOTU0MyAyOC45NDIzMSwtNy4yMzU1OGM5LjU4NzE0LC01Ljg0MDE0IDE3LjM2NTM4LC0xNi45MDAyNCAxNy4zNjUzOCwtMzIuNDU2NzNjMCwtMTYuNzk2ODcgLTExLjE4OTMsLTMwLjg4MDQxIC0yMS4yOTMyNywtNDNjLTQuMDA1NDEsLTQuODA2NDkgLTcuNTcxNTEsLTkuMjUxMiAtMTAuNzUsLTEzLjIzMDc3YzIuODk0MjMsLTAuNDM5MyA1LjE5NDExLC0yLjcxMzM0IDUuNjA3NTcsLTUuNjA3NTdjMC40MzkzMSwtMi45MjAwNyAtMS4wODUzMywtNS43NjI2MiAtMy43NDY5OSwtNy4wMDMwMWwtMjYuNDYxNTQsLTEzLjIzMDc3Yy0xLjE2Mjg2LC0wLjU2ODUxIC0yLjQ1NDkzLC0wLjc3NTI0IC0zLjcyMTE1LC0wLjYyMDE5Yy0wLjIwNjczLDAgLTAuNDEzNDYsMCAtMC42MjAxOSwwek04Niw3OS41OTEzNWMwLjMxMDEsMC40MTM0NiAwLjUxNjgzLDAuODI2OTIgMC44MjY5MiwxLjI0MDM4YzQuMDA1NDEsNS40MjY2OSA4Ljk2Njk1LDEwLjkwNTA1IDEzLjg1MDk2LDE2Ljc0NTE5YzkuNzQyMTksMTEuNzA2MTMgMTguMzk5MDQsMjQuMzk0MjMgMTguMzk5MDQsMzQuNzMwNzdjMCwxMS41NzY5MiAtNC40OTYzOSwxNy4xNTg2NSAtMTAuOTU2NzMsMjEuMDg2NTRjLTYuNDYwMzMsMy45Mjc4OCAtMTUuMzc1Niw1LjM3NSAtMjIuMTIwMTksNS4zNzVjLTYuNjQxMjIsMCAtMTUuNjA4MTcsLTEuNTUwNDggLTIyLjEyMDE5LC01LjU4MTczYy02LjUxMjAyLC00LjAzMTI1IC0xMC45NTY3MywtOS42OTA1MSAtMTAuOTU2NzMsLTIwLjg3OTgxYzAsLTkuOTIzMDggOC42MzEwMSwtMjIuNTMzNjUgMTguMzk5MDQsLTM0LjMxNzMxYzQuODg0MDEsLTUuODkxODMgOS44NDU1NSwtMTEuNjgwMjkgMTMuODUwOTYsLTE3LjE1ODY1YzAuMzEwMSwtMC40MTM0NiAwLjUxNjgzLC0wLjgyNjkyIDAuODI2OTIsLTEuMjQwMzh6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4=" />
+    <h1>Hangman</h1>
+    <p>Find the hidden word - Enter a letter</p>
+
+    <div class="game-container">
+        <svg height="250" width="200" class="figure-container">
+            <line x1="60" y1="20" x2="140" y2="20" />
+            <line x1="140" y1="20" x2="140" y2="50" />
+            <line x1="60" y1="20" x2="60" y2="245" />
+            <line x1="20" y1="245" x2="100" y2="245" />
+
+            <circle cx="140" cy="70" r="20" class="figure-part" />
+            <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+            <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+            <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+            <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+            <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+        </svg>
+
+        <div class="wrong-letters-container">
+            <div id="wrong-letters">
+
+            </div>
+        </div>
+
+        <div class="word" id="word">
+
+        </div>
+    </div>
+
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+            <h2 id="final-message"></h2>
+            <button class="play-button" id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <div class="notification-container" id="notification-container">
+        <p>You have already entered this letter!</p>
+    </div>
+    <audio style="display:none" id="audio"
+        src="./Plants VS. Zombies NOOOOOOOOOOO!!! sound effect (free to use).mp3"></audio>
+</body>
+
+</html>
