@@ -5,6 +5,7 @@ const popup = document.getElementById("popup-container");
 const notification = document.getElementById("notification-container");
 const finalMessage = document.getElementById("final-message");
 const audio = document.getElementById("audio");
+const audio1 = document.getElementById("audio-1");
 const figureParts = document.querySelectorAll(".figure-part");
 
 const words = [
@@ -62,6 +63,8 @@ function updateWrongLettersEl() {
   if (wrongLettersArr.length === figureParts.length) {
     finalMessage.innerText = "Unfortunately You Lost! 😢";
     figureParts.forEach((figure) => figure.classList.add("hang"));
+    audio1.currentTime = 11;
+    audio1.play();
     audio.play();
     setTimeout(() => (popup.style.display = "flex"), 3000);
   }
