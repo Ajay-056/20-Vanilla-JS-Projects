@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+body {
+  background-color: #ffefea;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  margin: auto;
+  padding: 2rem;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.container .btn {
+  cursor: pointer;
+  background-color: darksalmon;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 0.8rem;
+}
+
+.container .btn:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.container .btn-toggle {
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.container .text-box {
+  width: 50%;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%) scale(0);
+          transform: translate(-50%) scale(0);
+  background-color: #333;
+  padding: 2rem;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .text-box.show {
+  -webkit-transform: translate(-50%) scale(1);
+          transform: translate(-50%) scale(1);
+}
+
+.container .text-box span {
+  position: absolute;
+  top: 1rem;
+  right: 1.3rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.container .text-box h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+}
+
+.container .text-box select {
+  background-color: darksalmon;
+  border: 0;
+  color: #fff;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.container .text-box textarea {
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  padding: 0.8rem;
+  margin: 1.5rem 0;
+  width: 100%;
+  height: 15rem;
+}
+
+.container .text-box .btn {
+  display: block;
+  margin: auto;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+main .box {
+  -webkit-box-shadow: 0 2px 1rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 1rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-transition: -webkit-box-shadow 0.2s ease-out;
+  transition: -webkit-box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out, -webkit-box-shadow 0.2s ease-out;
+}
+
+main .box.active {
+  -webkit-box-shadow: 0 0 1rem 5px darksalmon;
+          box-shadow: 0 0 1rem 5px darksalmon;
+}
+
+main .box img {
+  width: 100%;
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .box p {
+  background-color: darksalmon;
+  color: #fff;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 1rem;
+  text-align: center;
+  height: 100%;
+}
+
+button:active, button:focus,
+select:active,
+select:focus,
+textarea:active,
+textarea:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 68.75em) {
+  main {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 47.5em) {
+  main {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=style.css.map */
