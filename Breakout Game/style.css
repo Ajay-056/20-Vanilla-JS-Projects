@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+body {
+  background-color: #0095dd;
+  font-family: 'Poppins', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+h1 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  font-size: 1.8rem;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.btn:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.btn.rules-btn {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.rules {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  min-height: 100vh;
+  width: 40rem;
+  padding: 2rem;
+  line-height: 1.5;
+  -webkit-transform: translateX(-40rem);
+          transform: translateX(-40rem);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.rules h2 {
+  font-size: 3rem;
+  color: sandybrown;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 4rem;
+}
+
+.rules p {
+  margin: 2rem;
+  font-size: 2rem;
+}
+
+.rules .close-btn {
+  margin: auto;
+}
+
+canvas {
+  background-color: #f0f0f0;
+  display: block;
+  border-radius: 5px;
+}
+
+.fa-times {
+  color: #fff;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
