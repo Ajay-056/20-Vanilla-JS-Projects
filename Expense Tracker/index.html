@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'
+        integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=='
+        crossorigin='anonymous' />
+    <link rel='stylesheet' href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+</head>
+
+<body>
+    <h2 class="title">Expense Tracker</h2>
+
+    <div class="container">
+        <div class="balance-container">
+            <h4>Your Balance</h4>
+            <h1 id="balance" class="balance">10.00</h1>
+        </div>
+
+        <div class="inc-exp-container">
+            <div>
+                <h4>Income</h4>
+                <p id="money-plus" class="money plus">+$0.00</p>
+            </div>
+            <div>
+                <h4>Expense</h4>
+                <p id="money-minus" class="money minus">-$0.00</p>
+            </div>
+        </div>
+
+        <h3>History</h3>
+        <ul class="list" id="list">
+            <!-- <li class="plus">Cash <span>-$400</span><button class="delete-btn" type="button">X</button></li> -->
+        </ul>
+
+        <h3>Add New Transaction</h3>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="text">Text</label>
+                <input type="text" class="text" id="text" placeholder="Enter text...">
+            </div>
+
+            <div class="form-control">
+                <label for="amount">Amount <br> (negative - expense, positive - income)</label>
+                <input type="number" class="amount" id="amount" placeholder="Enter Amount...">
+            </div>
+
+            <button class="btn" type="submit">Add Transaction</button>
+        </form>
+    </div>
+
+    <!-- <div class="alert"><i class="fas fa-times-circle"></i> Please fill in the text or amount field!</div> -->
+</body>
+
+</html>
